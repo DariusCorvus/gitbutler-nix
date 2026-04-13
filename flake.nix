@@ -56,7 +56,7 @@
           runHook preInstall
 
           mkdir -p $out/bin
-          cp usr/bin/gitbutler-tauri $out/bin/
+          cp usr/bin/gitbutler-tauri $out/bin/gitbutler
           cp usr/bin/gitbutler-git-askpass $out/bin/
 
           mkdir -p $out/share
@@ -65,7 +65,7 @@
           cp -r usr/share/metainfo $out/share/
 
           substituteInPlace $out/share/applications/GitButler.desktop \
-            --replace-fail "Exec=gitbutler-tauri" "Exec=$out/bin/gitbutler-tauri"
+            --replace-fail "Exec=gitbutler-tauri" "Exec=$out/bin/gitbutler"
 
           runHook postInstall
         '';
@@ -75,7 +75,7 @@
           homepage = "https://gitbutler.com";
           license = licenses.free;
           platforms = [ "x86_64-linux" ];
-          mainProgram = "gitbutler-tauri";
+          mainProgram = "gitbutler";
         };
       };
     in
@@ -87,7 +87,7 @@
 
       apps.${system}.default = {
         type = "app";
-        program = "${gitbutler}/bin/gitbutler-tauri";
+        program = "${gitbutler}/bin/gitbutler";
       };
     };
 }

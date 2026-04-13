@@ -31,8 +31,10 @@ nix profile install github:DariusCorvus/gitbutler-nix
 
 ```sh
 nix shell github:DariusCorvus/gitbutler-nix
-gitbutler-tauri
+gitbutler
 ```
+
+The provided binary is called `gitbutler`.
 
 ## What it does
 
