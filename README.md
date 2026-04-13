@@ -21,6 +21,12 @@ nix run github:DariusCorvus/gitbutler-nix
 }
 ```
 
+### Install to profile
+
+```sh
+nix profile install github:DariusCorvus/gitbutler-nix
+```
+
 ### Try in a shell
 
 ```sh
