@@ -34,7 +34,7 @@ nix shell github:DariusCorvus/gitbutler-nix
 gitbutler
 ```
 
-The provided binary is called `gitbutler`.
+The provided binary is `gitbutler-tauri`, with `gitbutler` as an alias.
 
 ## What it does
 

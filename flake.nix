@@ -56,7 +56,8 @@
           runHook preInstall
 
           mkdir -p $out/bin
-          cp usr/bin/gitbutler-tauri $out/bin/gitbutler
+          cp usr/bin/gitbutler-tauri $out/bin/gitbutler-tauri
+          ln -s gitbutler-tauri $out/bin/gitbutler
           cp usr/bin/gitbutler-git-askpass $out/bin/
 
           mkdir -p $out/share
@@ -65,7 +66,7 @@
           cp -r usr/share/metainfo $out/share/
 
           substituteInPlace $out/share/applications/GitButler.desktop \
-            --replace-fail "Exec=gitbutler-tauri" "Exec=$out/bin/gitbutler"
+            --replace-fail "Exec=gitbutler-tauri" "Exec=$out/bin/gitbutler-tauri"
 
           runHook postInstall
         '';
